@@ -27,7 +27,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
 
 /* =========================
-   فرم ثبت نام و تلگرام
+   فرم ثبت نام و اتصال تلگرام
    ========================= */
 
 const form = document.getElementById('registerForm');
@@ -116,36 +116,40 @@ if (form) {
    تایمر مسابقات مایانا
    ========================= */
 
-/*
-   مسابقات:
-   ۳۰ مرداد ۱۴۰۵
-   شروع: ۸ صبح
-   پایان: ۱۶:۰۰
-
-   تاریخ میلادی معادل:
-   21 August 2026
-*/
-
-
 const eventCard = document.getElementById('mayanaEvent');
 
 
 if (eventCard) {
 
-  const eventStart = new Date('2026-08-21T08:00:00+03:30').getTime();
+  /*
+    مسابقات مایانا آقایان
+    استانی
+    ۳۰ مرداد ۱۴۰۵
+    شروع: ۸ صبح
+    پایان: ۱۶:۰۰
+  */
 
-  const eventEnd = new Date('2026-08-21T16:00:00+03:30').getTime();
+  const eventStart =
+    new Date('2026-08-21T08:00:00+03:30').getTime();
+
+  const eventEnd =
+    new Date('2026-08-21T16:00:00+03:30').getTime();
 
 
-  const days = document.getElementById('eventDays');
+  const days =
+    document.getElementById('eventDays');
 
-  const hours = document.getElementById('eventHours');
+  const hours =
+    document.getElementById('eventHours');
 
-  const minutes = document.getElementById('eventMinutes');
+  const minutes =
+    document.getElementById('eventMinutes');
 
-  const seconds = document.getElementById('eventSeconds');
+  const seconds =
+    document.getElementById('eventSeconds');
 
-  const status = document.getElementById('eventStatus');
+  const status =
+    document.getElementById('eventStatus');
 
 
   function updateEventTimer() {
@@ -153,7 +157,7 @@ if (eventCard) {
     const now = Date.now();
 
 
-    /* بعد از پایان مسابقه */
+    /* بعد از پایان مسابقات */
 
     if (now >= eventEnd) {
 
@@ -164,7 +168,7 @@ if (eventCard) {
     }
 
 
-    /* مسابقات در حال برگزاری */
+    /* هنگام برگزاری مسابقات */
 
     if (now >= eventStart) {
 
@@ -176,48 +180,59 @@ if (eventCard) {
 
       seconds.textContent = '00';
 
-      status.textContent = '🔴 مسابقات در حال برگزاری است';
+      status.textContent =
+        '🔴 مسابقات در حال برگزاری است';
 
       return;
 
     }
 
 
-    /* زمان باقی مانده تا مسابقه */
+    /* شمارش معکوس */
 
-    const difference = eventStart - now;
-
-
-    const d = Math.floor(
-      difference / (1000 * 60 * 60 * 24)
-    );
+    const difference =
+      eventStart - now;
 
 
-    const h = Math.floor(
-      (difference / (1000 * 60 * 60)) % 24
-    );
+    const d =
+      Math.floor(
+        difference / (1000 * 60 * 60 * 24)
+      );
 
 
-    const m = Math.floor(
-      (difference / (1000 * 60)) % 60
-    );
+    const h =
+      Math.floor(
+        (difference / (1000 * 60 * 60)) % 24
+      );
 
 
-    const s = Math.floor(
-      (difference / 1000) % 60
-    );
+    const m =
+      Math.floor(
+        (difference / (1000 * 60)) % 60
+      );
 
 
-    days.textContent = String(d).padStart(2, '0');
-
-    hours.textContent = String(h).padStart(2, '0');
-
-    minutes.textContent = String(m).padStart(2, '0');
-
-    seconds.textContent = String(s).padStart(2, '0');
+    const s =
+      Math.floor(
+        (difference / 1000) % 60
+      );
 
 
-    status.textContent = '⏳ در انتظار شروع مسابقات';
+    days.textContent =
+      String(d).padStart(2, '0');
+
+    hours.textContent =
+      String(h).padStart(2, '0');
+
+    minutes.textContent =
+      String(m).padStart(2, '0');
+
+    seconds.textContent =
+      String(s).padStart(2, '0');
+
+
+    status.textContent =
+      '⏳ در انتظار شروع مسابقات';
 
   }
 
@@ -227,3 +242,55 @@ if (eventCard) {
   setInterval(updateEventTimer, 1000);
 
 }
+
+
+/* =========================
+   شمارش انیمیشنی هنرجویان
+   سانس اول = 40
+   سانس دوم = 30
+   ========================= */
+
+const counters =
+  document.querySelectorAll('.counter');
+
+
+counters.forEach(counter => {
+
+  const target =
+    Number(counter.dataset.target);
+
+
+  let current = 0;
+
+
+  const duration = 1500;
+
+
+  const stepTime =
+    Math.max(
+      Math.floor(duration / target),
+      20
+    );
+
+
+  const timer =
+    setInterval(() => {
+
+      current++;
+
+      counter.textContent =
+        current;
+
+
+      if (current >= target) {
+
+        counter.textContent =
+          target;
+
+        clearInterval(timer);
+
+      }
+
+    }, stepTime);
+
+});
