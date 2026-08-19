@@ -82,10 +82,6 @@
 <main>
 
 
-<!-- =========================
-     رشته‌های آموزشی
-     ========================= -->
-
 <section id="classes" class="section">
 
   <div class="section-title">
@@ -168,10 +164,6 @@
 
 </section>
 
-
-<!-- =========================
-     برنامه کلاس‌ها
-     ========================= -->
 
 <section class="schedule section">
 
@@ -256,10 +248,6 @@
 </section>
 
 
-<!-- =========================
-     مربی
-     ========================= -->
-
 <section class="about">
 
   <div class="about-box">
@@ -298,10 +286,6 @@
 
 </section>
 
-
-<!-- =========================
-     اطلاعات باشگاه
-     ========================= -->
 
 <section class="info section">
 
@@ -366,10 +350,6 @@
 </section>
 
 
-<!-- =========================
-     تماس با ما
-     ========================= -->
-
 <section class="contact section">
 
   <div class="section-title">
@@ -425,10 +405,6 @@
 </section>
 
 
-<!-- =========================
-     ثبت نام
-     ========================= -->
-
 <section id="register" class="register section">
 
 
@@ -460,7 +436,7 @@
 
 
       <label for="fullname">
-        نام و نام خانوادگی
+        👤 نام و نام خانوادگی
       </label>
 
       <input
@@ -472,7 +448,7 @@
 
 
       <label for="age">
-        سن
+        🎂 سن
       </label>
 
       <input
@@ -486,7 +462,7 @@
 
 
       <label for="phone">
-        شماره موبایل
+        📱 شماره موبایل
       </label>
 
       <input
@@ -499,10 +475,139 @@
 
 
       <label for="nationalCode">
-        کد ملی
+        🪪 کد ملی
       </label>
 
       <input
         type="tel"
         id="nationalCode"
-        placeholder="مثلاً 001
+        placeholder="مثلاً 0012345678"
+        inputmode="numeric"
+        maxlength="10"
+        required
+      >
+
+
+      <label for="fatherName">
+        👨 نام پدر
+      </label>
+
+      <input
+        type="text"
+        id="fatherName"
+        placeholder="مثلاً محمد"
+        required
+      >
+
+
+      <label for="course">
+        🥋 رشته مورد نظر
+      </label>
+
+      <select id="course" required>
+
+        <option value="">
+          انتخاب کنید
+        </option>
+
+        <option value="کونگ فو و هنرهای رزمی">
+          کونگ فو و هنرهای رزمی
+        </option>
+
+        <option value="دفاع شخصی">
+          دفاع شخصی
+        </option>
+
+        <option value="مبارزات آزاد و نیمه آزاد">
+          مبارزات آزاد و نیمه آزاد
+        </option>
+
+        <option value="آموزش سلاح سرد">
+          آموزش سلاح سرد
+        </option>
+
+      </select>
+
+
+      <label for="gender">
+        ⚧ جنسیت
+      </label>
+
+      <select id="gender" required>
+
+        <option value="">
+          انتخاب کنید
+        </option>
+
+        <option value="مرد">
+          مرد
+        </option>
+
+        <option value="زن">
+          زن
+        </option>
+
+      </select>
+
+
+      <label for="message">
+        📝 توضیحات
+      </label>
+
+      <textarea
+        id="message"
+        placeholder="اگر توضیح یا درخواست خاصی دارید، اینجا بنویسید..."
+        rows="4"
+      ></textarea>
+
+
+      <button
+        type="submit"
+        class="primary full"
+      >
+        ارسال درخواست ثبت‌نام
+      </button>
+
+
+      <small class="note">
+        مسئول ثبت‌نام باشگاه به‌زودی با شما تماس خواهد گرفت.
+      </small>
+
+
+    </form>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+  <div>
+
+    <strong>
+      خانه کونگ فو
+    </strong>
+
+    <p>
+      هنر رزمی • انضباط • قدرت
+    </p>
+
+  </div>
+
+
+  <div>
+    © تمامی حقوق برای خانه کونگ فو محفوظ است.
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
