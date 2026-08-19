@@ -1,0 +1,704 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0
+}
+
+html{
+  scroll-behavior:smooth
+}
+
+body{
+  font-family:Vazirmatn,Arial,sans-serif;
+  background:#090909;
+  color:#f5f5f5;
+  line-height:1.8
+}
+
+a{
+  text-decoration:none;
+  color:inherit
+}
+
+
+/* =========================
+   هدر
+   ========================= */
+
+.hero{
+  min-height:720px;
+  position:relative;
+  overflow:hidden;
+  background:
+  radial-gradient(circle at 80% 25%,rgba(194,25,25,.35),transparent 28%),
+  linear-gradient(125deg,#070707 25%,#171717 100%);
+  padding:24px 7% 80px
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+  left:-180px;
+  bottom:-250px
+}
+
+.nav{
+  position:relative;
+  z-index:2;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  max-width:1200px;
+  margin:auto
+}
+
+.brand{
+  display:flex;
+  gap:12px;
+  align-items:center
+}
+
+.brand strong{
+  display:block;
+  font-size:20px
+}
+
+.brand span{
+  display:block;
+  color:#999;
+  font-size:11px
+}
+
+.logo{
+  width:48px;
+  height:48px;
+  border-radius:14px;
+  background:#d20d16;
+  display:grid;
+  place-items:center;
+  font-size:23px;
+  font-weight:900;
+  box-shadow:0 8px 30px #d20d1638
+}
+
+.nav-btn,
+.primary{
+  background:#d20d16;
+  padding:11px 22px;
+  border-radius:10px;
+  font-weight:700;
+  transition:.2s
+}
+
+.nav-btn:hover,
+.primary:hover{
+  background:#f01b24;
+  transform:translateY(-2px)
+}
+
+
+/* =========================
+   هدر اصلی
+   ========================= */
+
+.hero-content{
+  position:relative;
+  z-index:1;
+  max-width:800px;
+  margin:125px auto 0;
+  text-align:center
+}
+
+.badge{
+  display:inline-block;
+  background:#ffffff0b;
+  border:1px solid #ffffff16;
+  border-radius:100px;
+  padding:5px 15px;
+  color:#ddd;
+  font-size:13px
+}
+
+h1{
+  font-size:clamp(42px,7vw,78px);
+  line-height:1.2;
+  margin:22px 0 18px;
+  font-weight:900
+}
+
+h1 span{
+  color:#e1141d
+}
+
+.hero-content p{
+  color:#aaa;
+  max-width:680px;
+  margin:auto;
+  font-size:16px
+}
+
+.hero-actions{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin-top:30px
+}
+
+.secondary{
+  border:1px solid #ffffff22;
+  padding:11px 22px;
+  border-radius:10px;
+  color:#ddd
+}
+
+.hero-card{
+  position:absolute;
+  z-index:2;
+  left:7%;
+  bottom:70px;
+  background:#111c;
+  padding:16px 22px;
+  border:1px solid #ffffff12;
+  border-radius:16px;
+  backdrop-filter:blur(10px);
+  min-width:190px
+}
+
+.hero-card small,
+.hero-card span{
+  display:block;
+  color:#999
+}
+
+.hero-card strong{
+  display:block;
+  font-size:21px;
+  color:#fff
+}
+
+
+/* =========================
+   بخش‌ها
+   ========================= */
+
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:100px 7%
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:45px
+}
+
+.section-title>span,
+.register>div:first-child>span,
+.about-box span{
+  color:#e1141d;
+  font-weight:700
+}
+
+.section-title h2,
+.register h2{
+  font-size:36px;
+  margin:7px 0
+}
+
+.section-title p,
+.register p{
+  color:#999
+}
+
+
+/* =========================
+   رشته‌های آموزشی
+   ========================= */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px
+}
+
+.cards article{
+  background:#111;
+  border:1px solid #ffffff0d;
+  padding:28px 22px;
+  border-radius:18px;
+  transition:.25s
+}
+
+.cards article:hover{
+  transform:translateY(-7px);
+  border-color:#d20d1644
+}
+
+.icon{
+  font-size:31px;
+  margin-bottom:15px
+}
+
+.cards h3{
+  font-size:18px;
+  margin-bottom:8px
+}
+
+.cards p{
+  color:#999;
+  font-size:13px
+}
+
+
+/* =========================
+   برنامه کلاس‌ها
+   ========================= */
+
+.schedule-cards{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+  max-width:900px;
+  margin:auto
+}
+
+.schedule-card{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  background:linear-gradient(145deg,#151515,#0e0e0e);
+  border:1px solid #ffffff12;
+  border-radius:20px;
+  padding:25px;
+  transition:.25s
+}
+
+.schedule-card:hover{
+  transform:translateY(-5px);
+  border-color:#d20d1644;
+  box-shadow:0 15px 40px rgba(0,0,0,.25)
+}
+
+.schedule-icon{
+  width:65px;
+  height:65px;
+  flex:none;
+  display:grid;
+  place-items:center;
+  background:#d20d16;
+  border-radius:16px;
+  font-size:30px;
+  box-shadow:0 8px 25px #d20d1630
+}
+
+.schedule-label{
+  display:inline-block;
+  color:#e1141d;
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:3px
+}
+
+.schedule-card h3{
+  font-size:19px;
+  margin-bottom:3px
+}
+
+.schedule-card p{
+  color:#888;
+  font-size:13px;
+  margin-bottom:5px
+}
+
+.schedule-card strong{
+  display:block;
+  color:#fff;
+  font-size:17px
+}
+
+
+/* =========================
+   معرفی مربی
+   ========================= */
+
+.about{
+  background:#d20d16;
+  padding:70px 7%;
+  position:relative;
+  overflow:hidden
+}
+
+.about:after{
+  content:"功夫";
+  position:absolute;
+  left:4%;
+  top:-50px;
+  font-size:220px;
+  font-weight:900;
+  color:#fff0f0
+}
+
+.about-box{
+  max-width:1000px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  gap:30px;
+  position:relative;
+  z-index:1
+}
+
+.about-box h2{
+  font-size:38px
+}
+
+.about-box p{
+  color:#ffe4e4;
+  max-width:700px
+}
+
+.seal{
+  width:110px;
+  height:110px;
+  border:2px solid #fff;
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  font-size:35px;
+  line-height:.8;
+  flex:none
+}
+
+.seal small{
+  font-size:22px
+}
+
+
+/* =========================
+   اطلاعات باشگاه
+   ========================= */
+
+.info{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  padding-top:70px;
+  padding-bottom:70px
+}
+
+.info-item{
+  display:flex;
+  gap:15px;
+  background:#111;
+  padding:22px;
+  border-radius:16px
+}
+
+.info-item>span{
+  font-size:28px
+}
+
+.info-item b{
+  font-size:15px
+}
+
+.info-item p{
+  color:#999;
+  font-size:13px
+}
+
+
+/* =========================
+   تماس با ما
+   ========================= */
+
+.contact-card{
+  max-width:850px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  gap:20px;
+  background:linear-gradient(145deg,#151515,#0e0e0e);
+  border:1px solid #ffffff12;
+  border-radius:20px;
+  padding:25px 28px;
+  transition:.25s
+}
+
+.contact-card:hover{
+  border-color:#d20d1644;
+  transform:translateY(-4px);
+  box-shadow:0 15px 40px rgba(0,0,0,.25)
+}
+
+.contact-icon{
+  width:65px;
+  height:65px;
+  flex:none;
+  display:grid;
+  place-items:center;
+  background:#d20d16;
+  border-radius:16px;
+  font-size:28px;
+  box-shadow:0 8px 25px #d20d1630
+}
+
+.contact-info{
+  flex:1
+}
+
+.contact-info span{
+  display:block;
+  color:#888;
+  font-size:12px
+}
+
+.contact-info strong{
+  display:block;
+  font-size:22px;
+  direction:ltr;
+  text-align:right;
+  letter-spacing:1px
+}
+
+.contact-info p{
+  color:#777;
+  font-size:12px
+}
+
+.contact-button{
+  background:#d20d16;
+  padding:11px 20px;
+  border-radius:10px;
+  font-weight:700;
+  transition:.2s;
+  white-space:nowrap
+}
+
+.contact-button:hover{
+  background:#f01b24;
+  transform:translateY(-2px)
+}
+
+
+/* =========================
+   ثبت‌نام
+   ========================= */
+
+.register{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:50px
+}
+
+.register-card{
+  background:#111;
+  border:1px solid #ffffff12;
+  border-radius:22px;
+  padding:30px;
+  min-width:310px;
+  width:430px;
+  box-shadow:0 20px 60px rgba(0,0,0,.25)
+}
+
+.register-card strong{
+  font-size:20px;
+  display:block;
+  margin-bottom:5px
+}
+
+.register-card form{
+  margin-top:20px
+}
+
+.register-card label{
+  display:block;
+  color:#ddd;
+  font-size:13px;
+  font-weight:600;
+  margin:16px 0 7px
+}
+
+.register-card input,
+.register-card select,
+.register-card textarea{
+  width:100%;
+  background:#090909;
+  color:#fff;
+  border:1px solid #ffffff18;
+  border-radius:12px;
+  padding:13px 14px;
+  font-family:inherit;
+  font-size:13px;
+  outline:none;
+  transition:.2s
+}
+
+.register-card input::placeholder,
+.register-card textarea::placeholder{
+  color:#666
+}
+
+.register-card input:hover,
+.register-card select:hover,
+.register-card textarea:hover{
+  border-color:#ffffff30
+}
+
+.register-card input:focus,
+.register-card select:focus,
+.register-card textarea:focus{
+  border-color:#d20d16;
+  box-shadow:0 0 0 3px #d20d1618
+}
+
+.register-card textarea{
+  resize:vertical;
+  min-height:95px
+}
+
+.register-card select{
+  cursor:pointer
+}
+
+.register-card button{
+  border:none;
+  color:#fff;
+  font-family:inherit;
+  font-size:14px;
+  cursor:pointer;
+  width:100%;
+  margin-top:20px;
+  transition:.2s
+}
+
+.register-card button:hover{
+  background:#f01b24
+}
+
+.register-card button:disabled{
+  opacity:.7;
+  cursor:not-allowed
+}
+
+.full{
+  display:block;
+  text-align:center
+}
+
+
+/* =========================
+   فوتر
+   ========================= */
+
+footer{
+  border-top:1px solid #ffffff0d;
+  max-width:1200px;
+  margin:auto;
+  padding:30px 7%;
+  display:flex;
+  justify-content:space-between;
+  color:#777;
+  font-size:12px
+}
+
+footer strong{
+  color:#eee;
+  font-size:16px
+}
+
+footer p{
+  margin-top:3px
+}
+
+
+/* =========================
+   تبلت
+   ========================= */
+
+@media(max-width:800px){
+
+  .cards{
+    grid-template-columns:1fr 1fr
+  }
+
+  .hero{
+    min-height:680px
+  }
+
+  .hero-card{
+    position:relative;
+    left:auto;
+    bottom:auto;
+    margin:55px auto 0;
+    width:max-content
+  }
+
+  .register{
+    flex-direction:column;
+    align-items:stretch
+  }
+
+  .register-card{
+    width:100%;
+    min-width:0
+  }
+
+  .info{
+    grid-template-columns:1fr
+  }
+
+  .about-box{
+    align-items:flex-start
+  }
+
+  .about-box h2{
+    font-size:29px
+  }
+
+  .schedule-cards{
+    grid-template-columns:1fr
+  }
+
+}
+
+
+/* =========================
+   موبایل
+   ========================= */
+
+@media(max-width:600px){
+
+  .contact-card{
+    flex-direction:column;
+    text-align:center
+  }
+
+  .contact-info strong{
+    text-align:center
+  }
+
+  .contact-button{
+    width:100%;
+    text-align:center
+  }
+
+}
+
+
+@media(max-width:520px){
+
+  .cards{
+    grid-template-columns:1fr
+  }
+
+  .hero{
+    padding-left:5%;
+    padding-right:
