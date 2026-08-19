@@ -3,23 +3,23 @@
 *{
   box-sizing:border-box;
   margin:0;
-  padding:0
+  padding:0;
 }
 
 html{
-  scroll-behavior:smooth
+  scroll-behavior:smooth;
 }
 
 body{
   font-family:Vazirmatn,Arial,sans-serif;
   background:#090909;
   color:#f5f5f5;
-  line-height:1.8
+  line-height:1.8;
 }
 
 a{
   text-decoration:none;
-  color:inherit
+  color:inherit;
 }
 
 
@@ -34,7 +34,7 @@ a{
   background:
   radial-gradient(circle at 80% 25%,rgba(194,25,25,.35),transparent 28%),
   linear-gradient(125deg,#070707 25%,#171717 100%);
-  padding:24px 7% 80px
+  padding:24px 7% 80px;
 }
 
 .hero:after{
@@ -45,7 +45,7 @@ a{
   border:1px solid rgba(255,255,255,.08);
   border-radius:50%;
   left:-180px;
-  bottom:-250px
+  bottom:-250px;
 }
 
 .nav{
@@ -55,24 +55,24 @@ a{
   justify-content:space-between;
   align-items:center;
   max-width:1200px;
-  margin:auto
+  margin:auto;
 }
 
 .brand{
   display:flex;
   gap:12px;
-  align-items:center
+  align-items:center;
 }
 
 .brand strong{
   display:block;
-  font-size:20px
+  font-size:20px;
 }
 
 .brand span{
   display:block;
   color:#999;
-  font-size:11px
+  font-size:11px;
 }
 
 .logo{
@@ -84,7 +84,7 @@ a{
   place-items:center;
   font-size:23px;
   font-weight:900;
-  box-shadow:0 8px 30px #d20d1638
+  box-shadow:0 8px 30px #d20d1638;
 }
 
 .nav-btn,
@@ -93,13 +93,13 @@ a{
   padding:11px 22px;
   border-radius:10px;
   font-weight:700;
-  transition:.2s
+  transition:.2s;
 }
 
 .nav-btn:hover,
 .primary:hover{
   background:#f01b24;
-  transform:translateY(-2px)
+  transform:translateY(-2px);
 }
 
 
@@ -112,7 +112,7 @@ a{
   z-index:1;
   max-width:800px;
   margin:125px auto 0;
-  text-align:center
+  text-align:center;
 }
 
 .badge{
@@ -122,39 +122,39 @@ a{
   border-radius:100px;
   padding:5px 15px;
   color:#ddd;
-  font-size:13px
+  font-size:13px;
 }
 
 h1{
   font-size:clamp(42px,7vw,78px);
   line-height:1.2;
   margin:22px 0 18px;
-  font-weight:900
+  font-weight:900;
 }
 
 h1 span{
-  color:#e1141d
+  color:#e1141d;
 }
 
 .hero-content p{
   color:#aaa;
   max-width:680px;
   margin:auto;
-  font-size:16px
+  font-size:16px;
 }
 
 .hero-actions{
   display:flex;
   justify-content:center;
   gap:12px;
-  margin-top:30px
+  margin-top:30px;
 }
 
 .secondary{
   border:1px solid #ffffff22;
   padding:11px 22px;
   border-radius:10px;
-  color:#ddd
+  color:#ddd;
 }
 
 .hero-card{
@@ -167,19 +167,19 @@ h1 span{
   border:1px solid #ffffff12;
   border-radius:16px;
   backdrop-filter:blur(10px);
-  min-width:190px
+  min-width:190px;
 }
 
 .hero-card small,
 .hero-card span{
   display:block;
-  color:#999
+  color:#999;
 }
 
 .hero-card strong{
   display:block;
   font-size:21px;
-  color:#fff
+  color:#fff;
 }
 
 
@@ -190,30 +190,30 @@ h1 span{
 .section{
   max-width:1200px;
   margin:auto;
-  padding:100px 7%
+  padding:100px 7%;
 }
 
 .section-title{
   text-align:center;
-  margin-bottom:45px
+  margin-bottom:45px;
 }
 
 .section-title>span,
 .register>div:first-child>span,
 .about-box span{
   color:#e1141d;
-  font-weight:700
+  font-weight:700;
 }
 
 .section-title h2,
 .register h2{
   font-size:36px;
-  margin:7px 0
+  margin:7px 0;
 }
 
 .section-title p,
 .register p{
-  color:#999
+  color:#999;
 }
 
 
@@ -224,7 +224,7 @@ h1 span{
 .cards{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:16px
+  gap:16px;
 }
 
 .cards article{
@@ -232,27 +232,27 @@ h1 span{
   border:1px solid #ffffff0d;
   padding:28px 22px;
   border-radius:18px;
-  transition:.25s
+  transition:.25s;
 }
 
 .cards article:hover{
   transform:translateY(-7px);
-  border-color:#d20d1644
+  border-color:#d20d1644;
 }
 
 .icon{
   font-size:31px;
-  margin-bottom:15px
+  margin-bottom:15px;
 }
 
 .cards h3{
   font-size:18px;
-  margin-bottom:8px
+  margin-bottom:8px;
 }
 
 .cards p{
   color:#999;
-  font-size:13px
+  font-size:13px;
 }
 
 
@@ -265,7 +265,7 @@ h1 span{
   grid-template-columns:repeat(2,1fr);
   gap:18px;
   max-width:900px;
-  margin:auto
+  margin:auto;
 }
 
 .schedule-card{
@@ -276,13 +276,13 @@ h1 span{
   border:1px solid #ffffff12;
   border-radius:20px;
   padding:25px;
-  transition:.25s
+  transition:.25s;
 }
 
 .schedule-card:hover{
   transform:translateY(-5px);
   border-color:#d20d1644;
-  box-shadow:0 15px 40px rgba(0,0,0,.25)
+  box-shadow:0 15px 40px rgba(0,0,0,.25);
 }
 
 .schedule-icon{
@@ -294,7 +294,7 @@ h1 span{
   background:#d20d16;
   border-radius:16px;
   font-size:30px;
-  box-shadow:0 8px 25px #d20d1630
+  box-shadow:0 8px 25px #d20d1630;
 }
 
 .schedule-label{
@@ -302,24 +302,24 @@ h1 span{
   color:#e1141d;
   font-size:12px;
   font-weight:700;
-  margin-bottom:3px
+  margin-bottom:3px;
 }
 
 .schedule-card h3{
   font-size:19px;
-  margin-bottom:3px
+  margin-bottom:3px;
 }
 
 .schedule-card p{
   color:#888;
   font-size:13px;
-  margin-bottom:5px
+  margin-bottom:5px;
 }
 
 .schedule-card strong{
   display:block;
   color:#fff;
-  font-size:17px
+  font-size:17px;
 }
 
 
@@ -331,7 +331,7 @@ h1 span{
   background:#d20d16;
   padding:70px 7%;
   position:relative;
-  overflow:hidden
+  overflow:hidden;
 }
 
 .about:after{
@@ -341,7 +341,7 @@ h1 span{
   top:-50px;
   font-size:220px;
   font-weight:900;
-  color:#fff0f0
+  color:#fff0f0;
 }
 
 .about-box{
@@ -351,16 +351,16 @@ h1 span{
   align-items:center;
   gap:30px;
   position:relative;
-  z-index:1
+  z-index:1;
 }
 
 .about-box h2{
-  font-size:38px
+  font-size:38px;
 }
 
 .about-box p{
   color:#ffe4e4;
-  max-width:700px
+  max-width:700px;
 }
 
 .seal{
@@ -372,11 +372,11 @@ h1 span{
   place-items:center;
   font-size:35px;
   line-height:.8;
-  flex:none
+  flex:none;
 }
 
 .seal small{
-  font-size:22px
+  font-size:22px;
 }
 
 
@@ -389,7 +389,7 @@ h1 span{
   grid-template-columns:repeat(3,1fr);
   gap:16px;
   padding-top:70px;
-  padding-bottom:70px
+  padding-bottom:70px;
 }
 
 .info-item{
@@ -397,20 +397,20 @@ h1 span{
   gap:15px;
   background:#111;
   padding:22px;
-  border-radius:16px
+  border-radius:16px;
 }
 
 .info-item>span{
-  font-size:28px
+  font-size:28px;
 }
 
 .info-item b{
-  font-size:15px
+  font-size:15px;
 }
 
 .info-item p{
   color:#999;
-  font-size:13px
+  font-size:13px;
 }
 
 
@@ -428,13 +428,13 @@ h1 span{
   border:1px solid #ffffff12;
   border-radius:20px;
   padding:25px 28px;
-  transition:.25s
+  transition:.25s;
 }
 
 .contact-card:hover{
   border-color:#d20d1644;
   transform:translateY(-4px);
-  box-shadow:0 15px 40px rgba(0,0,0,.25)
+  box-shadow:0 15px 40px rgba(0,0,0,.25);
 }
 
 .contact-icon{
@@ -446,17 +446,17 @@ h1 span{
   background:#d20d16;
   border-radius:16px;
   font-size:28px;
-  box-shadow:0 8px 25px #d20d1630
+  box-shadow:0 8px 25px #d20d1630;
 }
 
 .contact-info{
-  flex:1
+  flex:1;
 }
 
 .contact-info span{
   display:block;
   color:#888;
-  font-size:12px
+  font-size:12px;
 }
 
 .contact-info strong{
@@ -464,12 +464,12 @@ h1 span{
   font-size:22px;
   direction:ltr;
   text-align:right;
-  letter-spacing:1px
+  letter-spacing:1px;
 }
 
 .contact-info p{
   color:#777;
-  font-size:12px
+  font-size:12px;
 }
 
 .contact-button{
@@ -478,12 +478,12 @@ h1 span{
   border-radius:10px;
   font-weight:700;
   transition:.2s;
-  white-space:nowrap
+  white-space:nowrap;
 }
 
 .contact-button:hover{
   background:#f01b24;
-  transform:translateY(-2px)
+  transform:translateY(-2px);
 }
 
 
@@ -495,7 +495,7 @@ h1 span{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:50px
+  gap:50px;
 }
 
 .register-card{
@@ -505,17 +505,17 @@ h1 span{
   padding:30px;
   min-width:310px;
   width:430px;
-  box-shadow:0 20px 60px rgba(0,0,0,.25)
+  box-shadow:0 20px 60px rgba(0,0,0,.25);
 }
 
 .register-card strong{
   font-size:20px;
   display:block;
-  margin-bottom:5px
+  margin-bottom:5px;
 }
 
 .register-card form{
-  margin-top:20px
+  margin-top:20px;
 }
 
 .register-card label{
@@ -523,13 +523,16 @@ h1 span{
   color:#ddd;
   font-size:13px;
   font-weight:600;
-  margin:16px 0 7px
+  margin:16px 0 7px;
 }
 
 .register-card input,
 .register-card select,
 .register-card textarea{
+  display:block;
   width:100%;
+  height:auto;
+  min-height:48px;
   background:#090909;
   color:#fff;
   border:1px solid #ffffff18;
@@ -538,34 +541,35 @@ h1 span{
   font-family:inherit;
   font-size:13px;
   outline:none;
-  transition:.2s
+  transition:.2s;
+  appearance:auto;
 }
 
 .register-card input::placeholder,
 .register-card textarea::placeholder{
-  color:#666
+  color:#666;
 }
 
 .register-card input:hover,
 .register-card select:hover,
 .register-card textarea:hover{
-  border-color:#ffffff30
+  border-color:#ffffff30;
 }
 
 .register-card input:focus,
 .register-card select:focus,
 .register-card textarea:focus{
   border-color:#d20d16;
-  box-shadow:0 0 0 3px #d20d1618
+  box-shadow:0 0 0 3px #d20d1618;
 }
 
 .register-card textarea{
   resize:vertical;
-  min-height:95px
+  min-height:95px;
 }
 
 .register-card select{
-  cursor:pointer
+  cursor:pointer;
 }
 
 .register-card button{
@@ -576,21 +580,29 @@ h1 span{
   cursor:pointer;
   width:100%;
   margin-top:20px;
-  transition:.2s
+  transition:.2s;
 }
 
 .register-card button:hover{
-  background:#f01b24
+  background:#f01b24;
 }
 
 .register-card button:disabled{
   opacity:.7;
-  cursor:not-allowed
+  cursor:not-allowed;
 }
 
 .full{
   display:block;
-  text-align:center
+  text-align:center;
+}
+
+.note{
+  display:block;
+  color:#777;
+  font-size:11px;
+  text-align:center;
+  margin-top:8px;
 }
 
 
@@ -606,16 +618,16 @@ footer{
   display:flex;
   justify-content:space-between;
   color:#777;
-  font-size:12px
+  font-size:12px;
 }
 
 footer strong{
   color:#eee;
-  font-size:16px
+  font-size:16px;
 }
 
 footer p{
-  margin-top:3px
+  margin-top:3px;
 }
 
 
@@ -626,11 +638,11 @@ footer p{
 @media(max-width:800px){
 
   .cards{
-    grid-template-columns:1fr 1fr
+    grid-template-columns:1fr 1fr;
   }
 
   .hero{
-    min-height:680px
+    min-height:680px;
   }
 
   .hero-card{
@@ -638,33 +650,33 @@ footer p{
     left:auto;
     bottom:auto;
     margin:55px auto 0;
-    width:max-content
+    width:max-content;
   }
 
   .register{
     flex-direction:column;
-    align-items:stretch
+    align-items:stretch;
   }
 
   .register-card{
     width:100%;
-    min-width:0
+    min-width:0;
   }
 
   .info{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
   }
 
   .about-box{
-    align-items:flex-start
+    align-items:flex-start;
   }
 
   .about-box h2{
-    font-size:29px
+    font-size:29px;
   }
 
   .schedule-cards{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
   }
 
 }
@@ -678,16 +690,16 @@ footer p{
 
   .contact-card{
     flex-direction:column;
-    text-align:center
+    text-align:center;
   }
 
   .contact-info strong{
-    text-align:center
+    text-align:center;
   }
 
   .contact-button{
     width:100%;
-    text-align:center
+    text-align:center;
   }
 
 }
@@ -696,9 +708,43 @@ footer p{
 @media(max-width:520px){
 
   .cards{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
   }
 
   .hero{
     padding-left:5%;
-    padding-right:
+    padding-right:5%;
+  }
+
+  .hero-content{
+    margin-top:95px;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+  }
+
+  .nav-btn{
+    padding:8px 14px;
+  }
+
+  .brand strong{
+    font-size:16px;
+  }
+
+  .section{
+    padding:70px 5%;
+  }
+
+  .register-card{
+    width:100%;
+    padding:24px 20px;
+  }
+
+  footer{
+    padding:25px 5%;
+    flex-direction:column;
+    gap:15px;
+  }
+
+}
