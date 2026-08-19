@@ -1,9 +1,9 @@
 const TELEGRAM_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwDwy-hux1HEXuSvET4Ratr-rRQ4a35x6VRIuaKrG0ua59wZeHYnTggTQatH8GCDPmz/exec";
 
 
-// =========================
-// اسکرول نرم
-// =========================
+/* =========================
+   حرکت نرم داخل سایت
+   ========================= */
 
 document.querySelectorAll('a[href^="#"]').forEach(a => {
 
@@ -26,9 +26,9 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 
-// =========================
-// فرم ثبت نام و اتصال تلگرام
-// =========================
+/* =========================
+   فرم ثبت نام و تلگرام
+   ========================= */
 
 const form = document.getElementById('registerForm');
 
@@ -112,89 +112,118 @@ if (form) {
 }
 
 
-// =========================
-// انیمیشن شمارش هنرجویان
-// =========================
+/* =========================
+   تایمر مسابقات مایانا
+   ========================= */
 
-const counters = document.querySelectorAll('.counter');
+/*
+   مسابقات:
+   ۳۰ مرداد ۱۴۰۵
+   شروع: ۸ صبح
+   پایان: ۱۶:۰۰
 
-const startCounter = counter => {
-
-  const target = Number(counter.dataset.target);
-
-  let current = 0;
-
-  const duration = 1500;
-
-  const startTime = performance.now();
+   تاریخ میلادی معادل:
+   21 August 2026
+*/
 
 
-  const updateCounter = currentTime => {
-
-    const elapsed = currentTime - startTime;
-
-    const progress = Math.min(elapsed / duration, 1);
-
-    current = Math.floor(progress * target);
-
-    counter.textContent = current;
+const eventCard = document.getElementById('mayanaEvent');
 
 
-    if (progress < 1) {
+if (eventCard) {
 
-      requestAnimationFrame(updateCounter);
+  const eventStart = new Date('2026-08-21T08:00:00+03:30').getTime();
 
-    } else {
+  const eventEnd = new Date('2026-08-21T16:00:00+03:30').getTime();
 
-      counter.textContent = target;
+
+  const days = document.getElementById('eventDays');
+
+  const hours = document.getElementById('eventHours');
+
+  const minutes = document.getElementById('eventMinutes');
+
+  const seconds = document.getElementById('eventSeconds');
+
+  const status = document.getElementById('eventStatus');
+
+
+  function updateEventTimer() {
+
+    const now = Date.now();
+
+
+    /* بعد از پایان مسابقه */
+
+    if (now >= eventEnd) {
+
+      eventCard.style.display = 'none';
+
+      return;
 
     }
 
-  };
+
+    /* مسابقات در حال برگزاری */
+
+    if (now >= eventStart) {
+
+      days.textContent = '00';
+
+      hours.textContent = '00';
+
+      minutes.textContent = '00';
+
+      seconds.textContent = '00';
+
+      status.textContent = '🔴 مسابقات در حال برگزاری است';
+
+      return;
+
+    }
 
 
-  requestAnimationFrame(updateCounter);
+    /* زمان باقی مانده تا مسابقه */
 
-};
-
-
-// شمارش وقتی بخش آمار وارد صفحه می‌شود
-
-if (counters.length > 0) {
-
-  const observer = new IntersectionObserver(entries => {
-
-    entries.forEach(entry => {
-
-      if (entry.isIntersecting) {
-
-        counters.forEach(counter => {
-
-          if (!counter.dataset.started) {
-
-            counter.dataset.started = "true";
-
-            startCounter(counter);
-
-          }
-
-        });
-
-      }
-
-    });
-
-  }, {
-    threshold: 0.4
-  });
+    const difference = eventStart - now;
 
 
-  const statsSection = document.querySelector('.students-stats');
+    const d = Math.floor(
+      difference / (1000 * 60 * 60 * 24)
+    );
 
-  if (statsSection) {
 
-    observer.observe(statsSection);
+    const h = Math.floor(
+      (difference / (1000 * 60 * 60)) % 24
+    );
+
+
+    const m = Math.floor(
+      (difference / (1000 * 60)) % 60
+    );
+
+
+    const s = Math.floor(
+      (difference / 1000) % 60
+    );
+
+
+    days.textContent = String(d).padStart(2, '0');
+
+    hours.textContent = String(h).padStart(2, '0');
+
+    minutes.textContent = String(m).padStart(2, '0');
+
+    seconds.textContent = String(s).padStart(2, '0');
+
+
+    status.textContent = '⏳ در انتظار شروع مسابقات';
 
   }
+
+
+  updateEventTimer();
+
+  setInterval(updateEventTimer, 1000);
 
 }
