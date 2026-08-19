@@ -342,6 +342,7 @@ h1 span{
   font-size:220px;
   font-weight:900;
   color:#fff0f0;
+  pointer-events:none;
 }
 
 .about-box{
@@ -373,6 +374,8 @@ h1 span{
   font-size:35px;
   line-height:.8;
   flex:none;
+  position:relative;
+  z-index:2;
 }
 
 .seal small{
@@ -667,14 +670,6 @@ footer p{
     grid-template-columns:1fr;
   }
 
-  .about-box{
-    align-items:flex-start;
-  }
-
-  .about-box h2{
-    font-size:29px;
-  }
-
   .schedule-cards{
     grid-template-columns:1fr;
   }
@@ -704,6 +699,10 @@ footer p{
 
 }
 
+
+/* =========================
+   موبایل کوچک
+   ========================= */
 
 @media(max-width:520px){
 
@@ -745,6 +744,45 @@ footer p{
     padding:25px 5%;
     flex-direction:column;
     gap:15px;
+  }
+
+
+  /* اصلاح بخش مربی در گوشی */
+
+  .about{
+    padding:50px 5%;
+  }
+
+  .about-box{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:20px;
+  }
+
+  .about-box h2{
+    font-size:27px;
+  }
+
+  .about-box p{
+    font-size:13px;
+  }
+
+  .seal{
+    width:85px;
+    height:85px;
+    font-size:27px;
+  }
+
+  .seal small{
+    font-size:17px;
+  }
+
+  .about:after{
+    font-size:120px;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
   }
 
 }
