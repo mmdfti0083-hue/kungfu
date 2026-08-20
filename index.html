@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
@@ -799,8 +800,8 @@
     </h2>
 
     <p>
-      پس از تکمیل فرم ثبت‌نام داخل سایت، یکی از دو فرم زیر را متناسب با سن هنرجو دانلود و چاپ کنید.
-      سپس فرم را تکمیل کرده و به‌صورت حضوری به مسئول باشگاه تحویل دهید.
+      بعد از پر کردن فرم ثبت‌نام داخل سایت، یکی از دو فرم زیر را متناسب با سن هنرجو دانلود و چاپ کنید؛
+      سپس فرم را پر کرده و به‌صورت حضوری به مسئول باشگاه تحویل دهید.
     </p>
 
   </div>
@@ -809,45 +810,226 @@
   <div class="register-card">
 
     <strong>
-      📄 فرم ثبت‌نام خانه کونگ فو
+      فرم ثبت‌نام خانه کونگ فو
     </strong>
 
-    <p style="color:#999; margin-bottom:20px;">
-      فرم مناسب سن هنرجو را انتخاب کنید:
-    </p>
+
+    <!-- فرم آنلاین -->
+
+    <form id="registerForm">
+
+      <label for="fullname">
+        👤 نام و نام خانوادگی
+      </label>
+
+      <input
+        type="text"
+        id="fullname"
+        placeholder="مثلاً علی رضایی"
+        required
+      >
+
+
+      <label for="age">
+        🎂 سن
+      </label>
+
+      <input
+        type="number"
+        id="age"
+        placeholder="مثلاً 18"
+        min="10"
+        max="100"
+        required
+      >
+
+
+      <label for="phone">
+        📱 شماره موبایل
+      </label>
+
+      <input
+        type="tel"
+        id="phone"
+        placeholder="مثلاً 09123456789"
+        inputmode="numeric"
+        required
+      >
+
+
+      <label for="nationalCode">
+        🪪 کد ملی
+      </label>
+
+      <input
+        type="tel"
+        id="nationalCode"
+        placeholder="مثلاً 0012345678"
+        inputmode="numeric"
+        maxlength="10"
+        required
+      >
+
+
+      <label for="fatherName">
+        👨 نام پدر
+      </label>
+
+      <input
+        type="text"
+        id="fatherName"
+        placeholder="مثلاً محمد"
+        required
+      >
+
+
+      <label for="course">
+        🥋 رشته مورد نظر
+      </label>
+
+      <select
+        id="course"
+        required
+      >
+
+        <option value="">
+          انتخاب کنید
+        </option>
+
+        <option value="کونگ فو و هنرهای رزمی">
+          کونگ فو و هنرهای رزمی
+        </option>
+
+        <option value="دفاع شخصی">
+          دفاع شخصی
+        </option>
+
+        <option value="مبارزات آزاد و نیمه آزاد">
+          مبارزات آزاد و نیمه آزاد
+        </option>
+
+        <option value="آموزش سلاح سرد">
+          آموزش سلاح سرد
+        </option>
+
+      </select>
+
+
+      <label for="gender">
+        ⚧ جنسیت
+      </label>
+
+      <select
+        id="gender"
+        required
+      >
+
+        <option value="">
+          انتخاب کنید
+        </option>
+
+        <option value="مرد">
+          مرد
+        </option>
+
+        <option value="زن">
+          زن
+        </option>
+
+      </select>
+
+
+      <label for="message">
+        📝 توضیحات
+      </label>
+
+      <textarea
+        id="message"
+        placeholder="اگر توضیح یا درخواست خاصی دارید، اینجا بنویسید..."
+        rows="4"
+      ></textarea>
+
+
+      <button
+        type="submit"
+        class="primary full"
+      >
+        📩 ارسال درخواست ثبت‌نام
+      </button>
+
+
+      <small class="note">
+        مسئول ثبت‌نام باشگاه به‌زودی با شما تماس خواهد گرفت.
+      </small>
+
+    </form>
 
 
     <!-- =========================
-         فرم زیر ۱۸ سال
+         فرم‌های چاپی
          ========================= -->
 
-    <a
-      href="2.png"
-      download="فرم-ثبت-نام-زیر-18-سال-خانه-کونگ-فو.png"
-      class="primary full"
-      style="text-align:center; display:block; margin-bottom:12px;"
+    <div
+      style="
+        margin-top:35px;
+        padding-top:25px;
+        border-top:1px solid #292929;
+      "
     >
-      👦 دانلود فرم ثبت‌نام زیر ۱۸ سال
-    </a>
+
+      <strong style="margin-bottom:10px;">
+        📄 فرم‌های چاپی ثبت‌نام
+      </strong>
 
 
-    <!-- =========================
-         فرم بالای ۱۸ سال
-         ========================= -->
-
-    <a
-      href="1.png"
-      download="فرم-ثبت-نام-بالای-18-سال-خانه-کونگ-فو.png"
-      class="secondary full"
-      style="text-align:center; display:block;"
-    >
-      👨 دانلود فرم ثبت‌نام بالای ۱۸ سال
-    </a>
+      <p
+        style="
+          color:#999;
+          font-size:13px;
+          margin-bottom:18px;
+        "
+      >
+        بعد از پر کردن فرم ثبت‌نام داخل سایت، یکی از دو فرم زیر را متناسب با سن هنرجو دانلود کنید و چاپ کنید؛
+        سپس فرم را پر کرده و به‌صورت حضوری به مسئول باشگاه تحویل دهید.
+      </p>
 
 
-    <small class="note">
-      فرم را دانلود و چاپ کرده و پس از تکمیل، حضوری به مسئول باشگاه تحویل دهید.
-    </small>
+      <!-- فرم زیر 18 سال -->
+
+      <a
+        href="1.png"
+        download="فرم-ثبت-نام-زیر-18-سال.png"
+        class="primary full"
+        style="
+          display:block;
+          text-align:center;
+          margin-bottom:12px;
+        "
+      >
+        👦 دانلود فرم زیر ۱۸ سال
+      </a>
+
+
+      <!-- فرم بالای 18 سال -->
+
+      <a
+        href="2.png"
+        download="فرم-ثبت-نام-بالای-18-سال.png"
+        class="secondary full"
+        style="
+          display:block;
+          text-align:center;
+        "
+      >
+        👨 دانلود فرم بالای ۱۸ سال
+      </a>
+
+
+      <small class="note">
+        فرم مناسب سن هنرجو را دانلود، چاپ و پس از تکمیل به‌صورت حضوری تحویل دهید.
+      </small>
+
+    </div>
 
   </div>
 
@@ -884,3 +1066,4 @@
 </body>
 
 </html>
+```
