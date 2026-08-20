@@ -1120,5 +1120,89 @@ footer p {
     height: 55px;
     font-size: 24px;
   }
+/* ===== اصلاح نهایی تم مشکی سایت ===== */
 
+body,
+main,
+section {
+  background-color: #0b0b0b;
+  color: #fff;
+}
+
+/* بخش‌هایی که سفید شده‌اند */
+.students-stats,
+.gallery,
+.faq,
+.info,
+.contact,
+.register {
+  background-color: #0b0b0b !important;
+  color: #fff !important;
+}
+
+/* کارت‌ها */
+.cards article,
+.stat-card,
+.gallery-item,
+.faq-list details,
+.info-item,
+.contact-card,
+.register-card {
+  background-color: #151515 !important;
+  color: #fff !important;
+  border-color: #292929 !important;
+}
+
+/* نوشته‌های توضیحی */
+.section-title p,
+.cards p,
+.stat-info small,
+.faq-list details p,
+.about-box p,
+.info-item p,
+.contact-info p,
+.register > div:first-child p {
+  color: #999 !important;
+}
+
+/* عنوان‌ها */
+.section-title h2,
+.cards h3,
+.stat-info h3,
+.faq-list summary,
+.info-item b,
+.contact-info strong,
+.register h2,
+.register-card > strong {
+  color: #fff !important;
+}
+
+/* ورودی‌های فرم */
+.register-card input,
+.register-card select,
+.register-card textarea {
+  background: #0e0e0e !important;
+  color: #fff !important;
+  border-color: #333 !important;
+}
+
+/* گالری */
+.gallery-grid {
+  background: transparent !important;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+/* بخش اطلاعات پایین */
+.info {
+  background: #0b0b0b !important;
+}
+
+/* جلوگیری از نوار سفید بین بخش‌ها */
+section::before,
+section::after {
+  background: transparent;
+}
 }
